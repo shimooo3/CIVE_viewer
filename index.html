@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIVE Viewer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="graph-container">
+            <div id="graph-3d" class="main-graph"></div>
+            <div class="sub-graphs">
+                <div id="graph-rg" class="sub-graph"></div>
+                <div id="graph-rb" class="sub-graph"></div>
+                <div id="graph-gb" class="sub-graph"></div>
+            </div>
+        </div>
+        <div class="controls">
+            <div class="color-picker">
+                <label for="color-input">色選択</label>
+                <input type="color" id="color-input">
+            </div>
+            <div class="plane-equation">
+                <label>αR + βG + γB + δ = 0</label>
+                <div class="plane-inputs">
+                    <input type="number" id="alpha" placeholder="α" value="0.441">
+                    <input type="number" id="beta" placeholder="β" value="-0.811">
+                    <input type="number" id="gamma" placeholder="γ" value="0.385">
+                    <input type="number" id="delta" placeholder="δ" value="18.78745">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
